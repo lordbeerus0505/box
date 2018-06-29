@@ -20,9 +20,7 @@ from ..yellowant_api.models import UserIntegration,BOX_Credentials
 
 def index(request, path=""):
     """Index of the user Integration."""
-    context = {
-        "user_integrations": []
-    }
+
 
     if request.user.is_authenticated:
         user_integrations = UserIntegration.objects.filter(user=request.user.id)
@@ -30,7 +28,8 @@ def index(request, path=""):
         # for user_integration in user_integrations:
         #     context["user_integrations"].append(user_integration)
     context = {"base_href": settings.BASE_HREF,
-               "application_id": settings.YA_APP_ID
+               "application_id": settings.YA_APP_ID,
+               "user_integrations": []
                }
 
     print("returning from index")
