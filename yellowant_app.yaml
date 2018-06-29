@@ -1,4 +1,4 @@
-api_url: https://00c6567b.ngrok.io/apiurl/
+api_url: https://box123.herokuapp.com/apiurl/
 creator_email: abhiram.natarajan@gmail.com
 documentation_url: http://yellowant.com/docs
 functions:
@@ -161,18 +161,18 @@ functions:
     short_description: Returns user login ID
     user_rate_limit: 0.0
 icon_url: https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Box%2C_Inc._logo.svg/1024px-Box%2C_Inc._logo.svg.png
-install_page_url: http://yellowant.com/install
+install_page_url: https://box123.herokuapp.com/
 invoke_name: box
 is_active: 1
 is_production_or_sandbox: 1
 long_description: Integration of BOX cloud storage. Provides basic functionality,
   can view files and folders and search for them. Can also download files.
 name: BOX
-privacy_policy_url: http://yellowant.com/privacy
+privacy_policy_url: https://box1234.herokuapp.com/privacy
 rate_limit: 0.0
 rate_limited: 0
-redirect_uris: https://00c6567b.ngrok.io/redirecturl/
+redirect_uris: https://box123.herokuapp.com/redirecturl/
 short_description: Integration of BOX cloud storage.
 user_rate_limit: 0.0
 visibility_scope: 1
-website: http://yellowant.com/install
+website: https://box123.herokuapp.com/

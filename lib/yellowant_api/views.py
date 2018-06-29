@@ -149,14 +149,14 @@ def request_yellowant_oauth_code(request):
     """
     # get the user requesting to create a new YA integration 
     user = User.objects.get(id=request.user.id)
-    print("Hello\n\n")
+    print("Hello 1st\n\n")
     # generate a unique ID to identify the user when YA returns an oauth2 code
     state = str(uuid.uuid4())
-    print(state)
+    print("state in "+state)
 
     # save the relation between user and state so that we can identify the user when YA returns the oauth2 code
     data = YellowAntRedirectState.objects.create(user=user.id, state=state)
-    print(data)
+    print("Data" ,data)
 
     # Redirect the application user to the YA authentication page. Note that we are passing state, this app's client id,
     # oauth response type as code, and the url to return the oauth2 code at.
@@ -178,11 +178,11 @@ def yellowant_oauth_redirect(request):
     code = request.GET.get("code")
     print(code)
 
-    print("Hello\n\n")
+    print("Hello 2nd\n\n")
 
     # the unique string to identify the user for which we will create an integration
     state = request.GET.get("state")
-    print("state is")
+    print("state is 2nd")
     print(state)
     # fetch user with the help of state
     yellowant_redirect_state = YellowAntRedirectState.objects.get(state=state)
