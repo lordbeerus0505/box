@@ -1,0 +1,71 @@
+<div class="layout-container">
+  <section class="mb4" layout="column" layout-align="start center">
+    <!--<h1 class="f1 tc">Agilecrm</h1>-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <img class="app-logo" src="http://www.stickpng.com/assets/images/5842a75fa6515b1e0ad75afc.png" />
+    <md-button target="_blank" ng-if="$ctrl.userAccounts" ng-href="create-new-integration/" class="md-accent md-raised" layout="row">
+      <md-icon>add</md-icon> Add Account</md-button>
+  </section>
+
+  <section layout="column" layout-align="start center">
+    <md-list class="mw7 w-100" ng-if="$ctrl.userAccounts">
+      <md-list-item ng-repeat="account in $ctrl.userAccounts track by $index">
+        <md-card class="w-100 has-hidden-action-buttons">
+          <md-content class="pa3" layout="row" layout-align="space-between center" ng-if="account.app_authenticated">
+            <a class="mb0" ui-sref="accountSettings({ accountId: account.id })">
+              <h3 class="f3 mb2">{{ ::account.handle }}</h3>
+              <div><b>YellowAnt Invoke Name:</b> {{ ::account.user_invoke_name }}</div>
+
+              <!--<div><b>Repository Webhooks for YellowAnt:</b> {{ ::account.webhooks_count }}</div>-->
+              <div ng-if="!account.is_valid" class="mw7 w-100">
+               <div md-colors="::{ color: 'accent'}"><b>INTEGRATE</b> this account with AGILE </div>
+               </div>
+            </a>
+            <!--<a ng-if="account.app_authenticated" md-button class="md-primary md-raised hidden-action-buttons" ui-sref="accountSettings({ accountId: account.id })">View</a>-->
+          </md-content>
+          <!--<md-content class="pa3" layout="row" layout-align="space-between center" ng-if="!account.app_authenticated">-->
+
+            <!--&lt;!&ndash;<div class="mb0">&ndash;&gt;-->
+
+              <!--&lt;!&ndash;<h3 class="f3 mb2" md-colors="::{ color: 'accent'}">AgileCRM Account Not Integrated</h3>&ndash;&gt;-->
+
+              <!--&lt;!&ndash;<div><b>YellowAnt Invoke Name:</b> {{ ::account.user_invoke_name }}</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<a ng-if="!account.app_authenticated" md-button class="md-primary md-raised hidden-action-buttons" ng-click="$ctrl.onDeleteAccount(account)">Delete</a>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<a md-button class="md-accent md-raised hidden-action-buttons" target="_blank" ng-href="create-new-integration/">Integrate</a>&ndash;&gt;-->
+
+          <!--</md-content>-->
+          <!--<md-content class="pa3" layout="row" layout-align="space-between center" ng-if="!account.app_authenticated">-->
+            <!--<div class="mb0">-->
+              <!--<h3 class="f3 mb2" md-colors="::{ color: 'accent'}">Agilecrm Account Not Integrated</h3>-->
+              <!--<div><b>YellowAnt Invoke Name:</b> {{ ::account.user_invoke_name }}</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<a md-button class="md-accent md-raised hidden-action-buttons" target="_blank" ng-href="{{'integrate-app/?id=' + account.id }}">Integrate</a>&ndash;&gt;-->
+          <!--</md-content>-->
+        </md-card>
+      </md-list-item>
+    </md-list>
+    <div ng-if="!$ctrl.userAccounts" class="mw7 w-100">
+      <div class="mb3"><i>
+        BOX is a cloud storage application
+      </i></div>
+      <div layout="row" layout-align="center" class="mb4">
+        <img class="app-logo" src="data:image/png;base64,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" />
+      </div>
+      <div>
+        The BOX integration for YellowAnt allows you to manage your account in the following ways:
+        <ul>
+          <li>Get user details</li>
+          <li>Create folders</li>
+          <li>Move files</li>
+          <li>Rename files</li>
+          <li>... amongst other capabilities.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>

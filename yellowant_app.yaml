@@ -1,0 +1,178 @@
+api_url: https://00c6567b.ngrok.io/apiurl/
+creator_email: abhiram.natarajan@gmail.com
+documentation_url: http://yellowant.com/docs
+functions:
+  create_folder:
+    function_type: 1
+    input_args:
+      Folder-Name:
+        arg_type: 14
+        description: Name of the folder you want to create
+        example: Backup
+        name: Folder-Name
+        required: 1
+    invoke_name: create_folder
+    is_active: 1
+    max_retries: 0
+    name: Create Folder
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Creates a folder under root
+    user_rate_limit: 0.0
+  download_file:
+    function_type: 1
+    input_args:
+      File-Name:
+        arg_type: 14
+        description: Name of the file to download
+        example: DSC1.jpeg
+        name: File-Name
+        required: 1
+    invoke_name: download_file
+    is_active: 1
+    max_retries: 0
+    name: Download file
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Download a file from the root folder
+    user_rate_limit: 0.0
+  file_content:
+    function_type: 1
+    input_args:
+      File-Name:
+        arg_type: 14
+        description: Name of the Note file
+        example: test.boxnote
+        name: File-Name
+        required: 1
+    invoke_name: file_content
+    is_active: 1
+    max_retries: 0
+    name: File Contents
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Get the content of you notes on BOX
+    user_rate_limit: 0.0
+  list_all:
+    function_type: 1
+    input_args: {}
+    invoke_name: list_all
+    is_active: 1
+    max_retries: 0
+    name: List All
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: List all files and folders present in the box account giving
+      Name and ID
+    user_rate_limit: 0.0
+  move_file:
+    function_type: 1
+    input_args:
+      File-Name:
+        arg_type: 14
+        description: Name of the file that is to be moved
+        example: DSC1.jpg
+        name: File-Name
+        required: 1
+      Folder-Name:
+        arg_type: 14
+        description: Name of sub folder to move into
+        example: Backup
+        name: Folder-Name
+        required: 1
+    invoke_name: move_file
+    is_active: 1
+    max_retries: 0
+    name: Move File
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Move the file to another sub folder
+    user_rate_limit: 0.0
+  notification:
+    function_type: 2
+    input_args: {}
+    invoke_name: notification
+    is_active: 1
+    max_retries: 0
+    name: Notifications
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Gets notifications from box
+    user_rate_limit: 0.0
+  rename:
+    function_type: 1
+    input_args:
+      New-Name:
+        arg_type: 14
+        description: New name of folder
+        example: Backup2
+        name: New-Name
+        required: 1
+      Old-Name:
+        arg_type: 14
+        description: The original file name
+        example: Backup
+        name: Old-Name
+        required: 1
+    invoke_name: rename
+    is_active: 1
+    max_retries: 0
+    name: Rename
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Rename a file in the main directory
+    user_rate_limit: 0.0
+  search_item:
+    function_type: 1
+    input_args:
+      Item-Name:
+        arg_type: 14
+        description: Name of item being looked for. Exact name not required, Files
+          with the name specified in their file names will be displayed
+        example: .jpg
+        name: Item-Name
+        required: 1
+    invoke_name: search_item
+    is_active: 1
+    max_retries: 0
+    name: Search Items
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Search for a file or folder
+    user_rate_limit: 0.0
+  user_details:
+    function_type: 1
+    input_args: {}
+    invoke_name: user_details
+    is_active: 1
+    max_retries: 0
+    name: User details
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Returns user login ID
+    user_rate_limit: 0.0
+icon_url: https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Box%2C_Inc._logo.svg/1024px-Box%2C_Inc._logo.svg.png
+install_page_url: http://yellowant.com/install
+invoke_name: box
+is_active: 1
+is_production_or_sandbox: 1
+long_description: Integration of BOX cloud storage. Provides basic functionality,
+  can view files and folders and search for them. Can also download files.
+name: BOX
+privacy_policy_url: http://yellowant.com/privacy
+rate_limit: 0.0
+rate_limited: 0
+redirect_uris: https://00c6567b.ngrok.io/redirecturl/
+short_description: Integration of BOX cloud storage.
+user_rate_limit: 0.0
+visibility_scope: 1
+website: http://yellowant.com/install
