@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*', '{}.herokuapp.com'.format(app_name)]
 YA_OAUTH_URL = "https://www.yellowant.com/api/oauth2/authorize/"
 # URL to receive oauth2 codes from YA for user authentication. As a developer, you need to provide this URL in the YA
 # developer console so that YA knows exactly where to send the oauth2 codes.
-YA_REDIRECT_URL =BASE_URL + "redirecturl/" #"https://00c6567b.ngrok.io/redirecturl/"
+YA_REDIRECT_URL =BASE_URL + "/redirecturl/" #"https://00c6567b.ngrok.io/redirecturl/"
 
 # Numerical ID generated when you register your application through the YA developer console
 BASE_HREF="/"
