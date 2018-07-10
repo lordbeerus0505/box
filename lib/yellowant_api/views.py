@@ -241,7 +241,7 @@ def yellowant_oauth_redirect(request):
         client_secret='z0tvo8H3OqJR18Vga6zp9Ua1jYdAPF62',
         store_tokens=store_tokens(access_token, refresh_token),
     )
-    auth_url, csrf_token = oauth.get_authorization_url('https://00c6567b.ngrok.io/return/')
+    auth_url, csrf_token = oauth.get_authorization_url('https://box123.herokuapp.com//return/')
     url=auth_url
     print(url)
     return HttpResponseRedirect(url)
