@@ -39,7 +39,7 @@ def generateTokens(clientId,clientSecret,oauth2URL,apiUrl,authorizationCode):
     # # If we can't find the plist
     # except:
     #     # Try & generate new tokens
-    apiFolder = 'yellowant_BOX/lib/yellowant_command_center'
+    apiFolder = 'lib/yellowant_command_center'
     logFileFullPath = os.path.join(apiFolder, os.path.basename(sys.argv[0]) + '.log')
     plistFileFullPath = os.path.join(apiFolder, 'Box-API.plist')
     try:
